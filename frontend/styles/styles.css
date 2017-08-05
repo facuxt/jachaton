@@ -1,0 +1,69 @@
+.no1{
+    background: url(/images/vr.jpg);
+    background-position-y: 0px;
+    background-position-x: 62%;
+    background-size: cover;
+}
+.no2{
+    background: url(/images/teaching.jpg);
+    background-position-y: 0px;
+    background-position-x: 62%;
+    background-size: cover;
+}
+.no3{
+    background: url(/images/jobs.jpg);
+    background-position-y: 0px;
+    background-position-x: 62%;
+    background-size: cover;
+}
+.no4{
+    background: url(/images/papers.jpg);
+    background-position-y: 0px;
+    background-position-x: 62%;
+    background-size: cover;
+}
+.no5{
+    background: url(/images/events.jpg);
+    background-position-y: 0px;
+    background-position-x: 18%;
+    background-size: cover;
+}
+.no6{
+    background: url(/images/empren.jpeg);
+    background-position-y: 0px;
+    background-position-x: 18%;
+    background-size: cover;
+}
+.no7{
+    background: url(/images/social.JPG);
+    background-position-y: 0px;
+    background-position-x: 47%;
+    background-size: cover;
+}
+.no{
+    cursor: pointer;
+    -webkit-box-shadow:inset 30px 1px 50px 0 rgba(0,0,0,0.2);
+    box-shadow:inset 30px 1px 50px 0 rgba(0,0,0,0.2);
+    
+}
+.no:hover{
+    opacity: 0.7;
+}
+.no div{
+    font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
+    -webkit-transform: rotate(-90deg);
+    font-size: 31px;
+    margin-top: 75vh;
+    font-weight: bolder;
+    text-shadow: 0 1px 40px #000000;
+}
+.bigashell{
+    position: absolute;
+    top: 25px;
+    font-size: 32px;
+    text-shadow: 0 0 10px #000;
+    margin-left: 41vw;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}

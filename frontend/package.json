@@ -1,0 +1,22 @@
+{
+  "name": "payment",
+  "version": "0.0.1",
+  "description": "Payment application for twomonkeys",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FacundoCaselles@twomonkeys",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "~2",
+    "angular": "~1.6.0",
+    "angular-messages": "~1.6.0",
+    "angular-animate": "~1.6.0",
+    "angular-aria": "~1.6.0",
+    "angular-material": "~1.1.0",
+    "angular-ui-router": "~0.3.2",
+    "angular-ui-bootstrap": "~2",
+    "bootstrap": "~3",
+    "oclazyload": "~1"
+  }
+}

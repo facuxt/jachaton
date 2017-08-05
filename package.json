@@ -1,0 +1,15 @@
+{
+  "name": "risercalc",
+  "version": "1.0.0",
+  "description": "Riser calculations enhanced by machine learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fcaselles fguarnieri",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}

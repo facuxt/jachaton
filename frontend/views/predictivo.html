@@ -1,0 +1,36 @@
+<h3 style="margin-bottom: 30px;">Camión: XWA012</h3>
+<table id="table" class="table table-hover table-mc-light-blue">
+  <thead>
+      <tr>
+        <th style="color: #eee;">Num</th>
+        <th style="color: #eee;">Pieza</th>
+        <th style="color: #eee;">Uso actual</th>
+        <th style="color: #eee;">Uso recomendado</th>
+        <th style="color: #eee;">Uso predictivo</th>
+        <th style="color: #eee;">Status</th>
+        <th style="color: #eee;">Información</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in m.parts" ng-class="{'c-danger': item.danger, 'c-warning': item.warn}">
+        <td data-title="Num">{{$index}}</td>
+        <td data-title="Pieza">{{item.description}}</td>
+        <td data-title="Pieza">{{item.actual}}</td>
+        <td data-title="Pieza">{{item.preventivo}}</td>
+        <td data-title="Pieza">{{item.predictivo}}</td>
+        <td data-title="Status">
+          <div ng-if="item.danger">
+            PROBLEMA
+          </div>
+          <div ng-if="item.warn">
+            ADVERTENCIA
+          </div>
+          <div ng-if="!item.danger&&!item.warn">
+            OPERATIVO
+          </div>
+        </td>
+        <td data-title="Pieza">{{item.info}}</td>
+      </tr>
+      
+  </tbody>
+</table>

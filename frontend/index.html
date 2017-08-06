@@ -8,14 +8,17 @@
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta charset="UTF-8" />
-    <title>Jachatón - Plataforma de integración de comunidades</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+    <title>Asset reliability system</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
 </head>
-<body ng-app="app" style="background: transparent;" layout="column">
-    <!-- <md-toolbar layout="row" >
-      <h3>Unearthed hackathons</h3>
-    </md-toolbar> -->
-    <div flex layout="row">
+<body ng-app="app" style="background: transparent;" layout="column" layout-padding>
+     <md-toolbar layout="row" style="background:transparent;" class="mainPaddings">
+      <h3 ui-sref="home">Dashboard</h3>
+      
+    </md-toolbar> 
+    <div flex layout="row" class="mainMargins">
         <!-- <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
             <md-list>
             <md-list-item>
@@ -27,7 +30,53 @@
             </md-list-item>
           </md-list>
         </md-sidenav> -->
-        <md-content flex id="content" ui-view></md-content>
+        <md-content flex id="content" ng-controller="HomeController as m">
+            <div layout="column" layout-align="center top" class="animated fadeInDownBig">
+                <div layout="row">
+                    <div layout="row">
+                        <h3 class="searchTitle">Buscar:</h3>
+                        <md-autocomplete
+                            md-selected-item="m.selectedItem"
+                            md-search-text="m.searchText"
+                            md-items="item in m.querySearch(m.searchText)"
+                            md-item-text="item.display"
+                            md-min-length="0"
+                            placeholder="Busqueda por camión">
+                            <md-item-template>
+                                <span md-highlight-text="m.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                No se encontraron resultados para: "{{m.searchText}}".
+                            </md-not-found>
+                        </md-autocomplete>
+                    </div>
+                    <div flex></div>
+                    <div class="weather">
+                        20° <i class="material-icons">filter_drama</i>
+                    </div>
+                </div>
+                <div layout="column">
+                    <div layout="row">
+                        <div ng-repeat="item in m.menuItems" flex class="menu-items">
+                            <md-button ng-click="m.goto(item.htmlFile)">
+                                <div class="member" ng-class="{'special-one': (!item.secondWord&&!item.qty)}">
+                                    {{item.name}}
+                                </div>    
+                                <div class="alertQTY">
+                                    <span count-to="{{item.qty}}" value="0" duration="3" ng-if="item.qty"></span>
+                                </div>
+                                <div class="member" ng-if="item.secondWord">
+                                    <span>{{item.secondWord}}</span>
+                                </div>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row">
+                    <ui-view></ui-view>
+                </div>
+            </div>
+        </md-content>
     </div>
     <!-- JS  ASSETS-->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>

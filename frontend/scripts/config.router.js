@@ -24,13 +24,21 @@ angular.module('app')
         $urlRouterProvider
             .otherwise('/');
         $stateProvider
-            .state('SAMPLE', {
+            .state('home', {
                 url: '/',
                 //templateUrl: 'views/pages/home.html',
                 controller: 'HomeController',
                 controllerAs: 'm',
                 //resolve: load(['scripts/controllers/SampleController.js'])
                 templateUrl: "views/home.html"
+            })
+            .state('predictivo', {
+                url: '/predictivo',
+                //templateUrl: 'views/pages/home.html',
+                controller: 'PredictivoController',
+                controllerAs: 'm',
+                //resolve: load(['scripts/controllers/SampleController.js'])
+                templateUrl: "views/predictivo.html"
             })
 
 

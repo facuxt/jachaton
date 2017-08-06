@@ -1,40 +1,19 @@
-<div class="bigashell">
-    ¿Que desea hacer?
-</div>
-<div layout="row" layout-fill>
-    <div flex class="no no1" ng-click="m.openDialog('Realidad virtual', 'externos/vr')">
-        <div>
-            Realidad virtual
+<div layout="row">
+    <div layout="column">
+        <h3 class="searchTitle">Alertas:</h3>
+        <div layout="column" class="hidestuff">
+            <div ng-repeat="item in m.warnings | orderBy:'-' track by $index" ng-class="{'c-danger': item.danger, 'c-warning': !item.danger}">
+                {{item.date}} | Camión: {{item.mionca}}, {{item.description}}
+            </div>
         </div>
     </div>
-    <div flex class="no no2" ng-click="m.openDialog('Capacitaciones', 'externos/training')">
-        <div>
-            Capacitaciones
+    <div style="width: 60px"></div>
+    <div layout="column">
+        <h3 class="searchTitle">Eventos normales:</h3>
+        <div layout="column" class="hidestuff">
+            <div ng-repeat="item in m.events | orderBy:'-' track by $index">
+                {{item.date}} | Camión: {{item.mionca}}, {{item.description}}
+            </div>
         </div>
-    </div>
-    <div flex class="no no3" ng-click="m.openDialog('Bolsa de trabajo', 'externos/jobs')">
-        <div>
-            Bolsa de trabajo
-        </div>
-    </div>
-    <div flex class="no no4" ng-click="m.openDialog('Licitaciones', 'externos/licit')">
-        <div>
-            Licitaciones
-        </div>
-    </div>
-    <div flex class="no no5" ng-click="m.openDialog('Eventos', 'externos/events')">
-        <div>
-            Eventos
-        </div>
-    </div>
-    <div flex class="no no6" ng-click="m.openDialog('Desarrollo emprendedor', 'externos/entrepreneur')">
-        <div>
-            Desarrollo emprendedor
-        </div>
-    </div>
-    <div flex class="no no7" ng-click="m.openDialog('Comunidad', 'externos/community')">
-        <div>
-            Comunidad
-        </div>
-    </div>
+    </div> 
 </div>

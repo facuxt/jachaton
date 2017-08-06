@@ -8,15 +8,16 @@
   "author": "FacundoCaselles@twomonkeys",
   "license": "ISC",
   "dependencies": {
-    "jquery": "~2",
     "angular": "~1.6.0",
-    "angular-messages": "~1.6.0",
     "angular-animate": "~1.6.0",
     "angular-aria": "~1.6.0",
     "angular-material": "~1.1.0",
-    "angular-ui-router": "~0.3.2",
+    "angular-messages": "~1.6.0",
     "angular-ui-bootstrap": "~2",
+    "angular-ui-router": "~0.3.2",
+    "animate.css": "^3.5.2",
     "bootstrap": "~3",
+    "jquery": "~2",
     "oclazyload": "~1"
   }
 }
